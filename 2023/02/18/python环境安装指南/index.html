@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width">
+<meta name="theme-color" content="#222"><meta name="generator" content="Hexo 5.4.2">
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha256-Z1K5uhUaJXA7Ll0XrZ/0JhX4lAtZFpT6jkKrEDT0drU=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
+
+<script class="next-config" data-name="main" type="application/json">{"hostname":"example.com","root":"/","images":"/images","scheme":"Gemini","darkmode":false,"version":"8.14.2","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":{"enable":false,"style":null},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"Searching...","empty":"We didn't find any results for the search: ${query}","hits_time":"${hits} results found in ${time} ms","hits":"${hits} results found"}}</script><script src="/js/config.js"></script>
+
+    <meta name="description" content="这是显示在首页的概述，正文内容均会被隐藏。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Python环境安装指南">
+<meta property="og:url" content="http://example.com/2023/02/18/python%E7%8E%AF%E5%A2%83%E5%AE%89%E8%A3%85%E6%8C%87%E5%8D%97/index.html">
+<meta property="og:site_name" content="Chen&#39;s Blog">
+<meta property="og:description" content="这是显示在首页的概述，正文内容均会被隐藏。">
+<meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2023-02-18T08:54:18.332Z">
+<meta property="article:modified_time" content="2023-02-18T11:25:38.473Z">
+<meta property="article:author" content="Zhiyong Chen">
+<meta name="twitter:card" content="summary">
+
+
+<link rel="canonical" href="http://example.com/2023/02/18/python%E7%8E%AF%E5%A2%83%E5%AE%89%E8%A3%85%E6%8C%87%E5%8D%97/">
+
+
+
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"en","comments":true,"permalink":"http://example.com/2023/02/18/python%E7%8E%AF%E5%A2%83%E5%AE%89%E8%A3%85%E6%8C%87%E5%8D%97/","path":"2023/02/18/python环境安装指南/","title":"Python环境安装指南"}</script>
+
+<script class="next-config" data-name="calendar" type="application/json">""</script>
+<title>Python环境安装指南 | Chen's Blog</title>
+  
+
+
+
+
+
+
+
+
+  <noscript>
+    <link rel="stylesheet" href="/css/noscript.css">
+  </noscript>
+<!-- hexo injector head_end start -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css">
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/hexo-math@4.0.0/dist/style.css">
+<!-- hexo injector head_end end --></head>
+
+<body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
+  <div class="headband"></div>
+
+  <main class="main">
+    <div class="column">
+      <header class="header" itemscope itemtype="http://schema.org/WPHeader"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="Toggle navigation bar" role="button">
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <i class="logo-line"></i>
+      <p class="site-title">Chen's Blog</p>
+      <i class="logo-line"></i>
+    </a>
+      <p class="site-subtitle" itemprop="description">My awesome blog powered by Hexo</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger" aria-label="Search" role="button">
+    </div>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  <ul class="main-menu menu"><li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>Home</a></li><li class="menu-item menu-item-about"><a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>About</a></li><li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>Tags</a></li><li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>Categories</a></li><li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>Archives</a></li><li class="menu-item menu-item-schedule"><a href="/schedule/" rel="section"><i class="fa fa-calendar fa-fw"></i>Schedule</a></li><li class="menu-item menu-item-sitemap"><a href="/sitemap.xml" rel="section"><i class="fa fa-sitemap fa-fw"></i>Sitemap</a></li><li class="menu-item menu-item-commonweal"><a href="/404/" rel="section"><i class="fa fa-heartbeat fa-fw"></i>Commonweal 404</a></li>
+  </ul>
+</nav>
+
+
+
+
+</header>
+        
+  
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          Table of Contents
+        </li>
+        <li class="sidebar-nav-overview">
+          Overview
+        </li>
+      </ul>
+
+      <div class="sidebar-panel-container">
+        <!--noindex-->
+        <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Python"><span class="nav-number">1.</span> <span class="nav-text">Python</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#python-Win10%E5%AE%89%E8%A3%85%E5%92%8C%E9%85%8D%E7%BD%AE"><span class="nav-number">1.1.</span> <span class="nav-text">python Win10安装和配置</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%AE%89%E8%A3%85Python%E7%8E%AF%E5%A2%83"><span class="nav-number">1.2.</span> <span class="nav-text">安装Python环境</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%AE%89%E8%A3%85pip"><span class="nav-number">1.3.</span> <span class="nav-text">安装pip</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BF%AE%E6%94%B9pip%E6%BA%90"><span class="nav-number">1.4.</span> <span class="nav-text">修改pip源</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%AE%89%E8%A3%85-amp-%E9%85%8D%E7%BD%AESpyder"><span class="nav-number">1.5.</span> <span class="nav-text">安装&amp;配置Spyder</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%AE%89%E8%A3%85python%E5%90%84%E7%A7%8D%E5%8C%85"><span class="nav-number">1.6.</span> <span class="nav-text">安装python各种包</span></a></li></ol></li></ol></div>
+        </div>
+        <!--/noindex-->
+
+        <div class="site-overview-wrap sidebar-panel">
+          <div class="site-author animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <p class="site-author-name" itemprop="name">Zhiyong Chen</p>
+  <div class="site-description" itemprop="description">This is my personal blog where I share my thoughts and ideas.</div>
+</div>
+<div class="site-state-wrap animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+        <a href="/archives/">
+          <span class="site-state-item-count">6</span>
+          <span class="site-state-item-name">posts</span>
+        </a>
+      </div>
+  </nav>
+</div>
+
+        </div>
+      </div>
+    </div>
+
+    
+  </aside>
+
+
+    </div>
+
+    <div class="main-inner post posts-expand">
+
+
+  
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="en">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2023/02/18/python%E7%8E%AF%E5%A2%83%E5%AE%89%E8%A3%85%E6%8C%87%E5%8D%97/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="Zhiyong Chen">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Chen's Blog">
+      <meta itemprop="description" content="This is my personal blog where I share my thoughts and ideas.">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="Python环境安装指南 | Chen's Blog">
+      <meta itemprop="description" content="这是显示在首页的概述，正文内容均会被隐藏。">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          Python环境安装指南
+        </h1>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">Posted on</span>
+      
+
+      <time title="Created: 2023-02-18 16:54:18 / Modified: 19:25:38" itemprop="dateCreated datePublished" datetime="2023-02-18T16:54:18+08:00">2023-02-18</time>
+    </span>
+
+  
+</div>
+
+            <div class="post-description">这是显示在首页的概述，正文内容均会被隐藏。</div>
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+        <h1 id="Python"><a href="#Python" class="headerlink" title="Python"></a>Python</h1><h2 id="python-Win10安装和配置"><a href="#python-Win10安装和配置" class="headerlink" title="python Win10安装和配置"></a>python Win10安装和配置</h2><h2 id="安装Python环境"><a href="#安装Python环境" class="headerlink" title="安装Python环境"></a>安装Python环境</h2><ol>
+<li>首先，打开浏览器，访问Python官方网站(<a target="_blank" rel="noopener" href="https://www.python.org/">https://www.python.org/)。</a>%E3%80%82)</li>
+<li>点击网站上方的“Downloads”选项卡，然后选择“Windows”操作系统。这将显示可用的Python版本列表。选择最新的稳定版本，并根据您的系统选择32位或64位版本。</li>
+<li>点击下载链接下载安装程序。默认情况下，安装程序将保存在“Downloads”文件夹中。</li>
+<li>双击下载的安装程序，然后按照提示进行安装。在安装过程中，勾选“Add Python to PATH”选项，以便能够在命令行中访问Python。</li>
+<li>安装完成后，可以在命令行中输入以下命令验证Python是否已正确安装：</li>
+</ol>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">python --version</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<p>如果成功显示版本信息，则Python已经安装成功。</p>
+<ol start="6">
+<li>可以在Windows开始菜单中找到“Python”文件夹，其中包括Python解释器和其他工具。也可以在命令行中输入“python”命令，启动Python解释器，并开始编写Python代码。</li>
+</ol>
+<p>注意：安装Python时，应选择与您正在使用的Python库和框架兼容的Python版本。例如，如果您要使用TensorFlow，则应安装兼容的Python版本。此外，建议使用虚拟环境来管理不同的Python项目和库之间的依赖关系。</p>
+<h2 id="安装pip"><a href="#安装pip" class="headerlink" title="安装pip"></a>安装pip</h2><ol>
+<li>首先，在浏览器中访问<a target="_blank" rel="noopener" href="https://bootstrap.pypa.io/get-pip.py%E4%B8%8B%E8%BD%BDpip%E7%9A%84%E5%AE%89%E8%A3%85%E8%84%9A%E6%9C%AC%E3%80%82">https://bootstrap.pypa.io/get-pip.py下载pip的安装脚本。</a></li>
+<li>在浏览器中右键单击“get-pip.py”，然后选择“另存为”将文件保存在计算机上。</li>
+<li>打开命令行界面。可以使用Windows搜索栏，输入”cmd”并打开命令提示符。</li>
+<li>导航到保存了get-pip.py的目录。可以使用“cd”命令来更改目录。例如，如果文件保存在用户文件夹中，可以输入以下命令：<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">cd C:\Users\YourUserName</span><br><span class="line">python get-pip.py</span><br><span class="line">cd C:\Users\YourUserName</span><br></pre></td></tr></table></figure></li>
+</ol>
+<p>如果成功显示版本信息，则pip已经安装成功。</p>
+<p>注意：如果已经安装了Anaconda或其他Python发行版，则pip可能已经包含在其中。在这种情况下，可以在Anaconda Prompt或其他Python环境的命令行中直接使用pip。</p>
+<h2 id="修改pip源"><a href="#修改pip源" class="headerlink" title="修改pip源"></a>修改pip源</h2><p>在Windows 10中，pip源的配置文件名为 <code>pip.ini</code>，通常存储在用户主目录下的一个名为 <code>.pip</code>的隐藏文件夹中。要找到此文件，请按照以下步骤操作：</p>
+<ol>
+<li>打开文件资源管理器，点击地址栏中的文件夹图标。</li>
+<li>输入 <code>%userprofile%</code>并按下回车键。这将打开当前用户的主目录。</li>
+<li>在主目录中，您应该能够看到一个名为 <code>.pip</code>的文件夹。如果该文件夹不存在，则可以手动创建一个名为 <code>.pip</code>的文件夹。</li>
+<li>打开 <code>.pip</code>文件夹，查找名为 <code>pip.ini</code>的文件。如果该文件不存在，则可以手动创建一个名为 <code>pip.ini</code>的文件。</li>
+</ol>
+<p>在 <code>pip.ini</code>文件中，您可以指定pip使用的软件包源。例如，以下是使用阿里云镜像站作为pip源的 <code>pip.ini</code>文件示例：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">[global]</span><br><span class="line">index-url = https://mirrors.aliyun.com/pypi/simple/</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<p>注意：如果您已经在命令行中使用了 <code>--index-url</code>或 <code>-i</code>选项指定pip源，那么此选项将覆盖 <code>pip.ini</code>文件中的设置。</p>
+<p>如果您没有配置任何pip源，则此命令将返回默认源的URL：<code>https://pypi.org/simple/</code>。</p>
+<p>注1：不同的电脑pip配置文件的位置略有差异，采用如下命令可以快速写入配置</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">PS C:\Users\89791\Downloads&gt; pip config set global.index-url https://pypi.tuna.tsinghua.edu.cn/simple                                                                                                              Writing to C:\Users\89791\AppData\Roaming\pip\pip.ini</span><br><span class="line">PS C:\Users\89791\Downloads&gt; cat C:\Users\89791\AppData\Roaming\pip\pip.ini                                                                                                                                        [global]</span><br><span class="line">index-url = https://pypi.tuna.tsinghua.edu.cn/simple</span><br><span class="line"></span><br><span class="line">PS C:\Users\89791\Downloads&gt; pip config list                                                                                                                                                                       global.index-url=&#x27;https://pypi.tuna.tsinghua.edu.cn/simple&#x27;</span><br></pre></td></tr></table></figure>
+
+<p>注2：临时采用指定源的方法如下：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pip install -i https://pypi.tuna.tsinghua.edu.cn/simple some-package</span><br></pre></td></tr></table></figure>
+
+<h2 id="安装-amp-配置Spyder"><a href="#安装-amp-配置Spyder" class="headerlink" title="安装&amp;配置Spyder"></a>安装&amp;配置Spyder</h2><p>从以下网站下载并安装Spyder</p>
+<p><a target="_blank" rel="noopener" href="https://github.com/spyder-ide/spyder/releases/latest/download/Spyder_64bit_full.exe">https://github.com/spyder-ide/spyder/releases/latest/download/Spyder_64bit_full.exe</a></p>
+<p>安装Spyder后，您可能需要进行一些配置，以确保它在您的计算机上按预期工作。以下是一些可能需要配置的设置：</p>
+<ol>
+<li>配置Python环境：Spyder需要安装Python才能运行。您需要在Spyder中配置Python环境，以便Spyder能够找到和使用Python。您可以通过在Spyder的”Preferences”（”首选项”）菜单中选择”Python Interpreter”（”Python解释器”）选项来配置Python环境。在这里，您可以选择已安装的Python解释器，或者指定其他Python解释器的路径。</li>
+<li>更改字体和主题：默认情况下，Spyder使用Monokai主题和Consolas字体。如果您想更改字体和主题，您可以在”Preferences”（”首选项”）菜单中选择”Appearance”（”外观”）选项。在这里，您可以选择不同的主题、字体和字体大小。</li>
+<li>配置文件路径：Spyder将配置文件和项目文件保存在本地计算机上。如果您想更改这些文件的位置，您可以在”Preferences”（”首选项”）菜单中选择”Spyder Configuration”（”Spyder配置”）选项。在这里，您可以更改配置文件的路径，以及设置其他一些高级选项。</li>
+<li>安装插件和外部工具：Spyder支持许多插件和外部工具，可以扩展其功能。您可以在”Preferences”（”首选项”）菜单中选择”Plugins”（”插件”）选项，以查看可用的插件，并安装和启用它们。同样，您可以在”Preferences”（”首选项”）菜单中选择”External Tools”（”外部工具”）选项，以配置和管理外部工具。</li>
+</ol>
+<p>以上是一些可能需要配置的Spyder设置。根据您的具体需求，还可能需要更改其他设置。</p>
+<p>如果提示当前python版本无spyder-kernel，则根据提示安装，如下：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pip install spyder-kernels==2.1.*</span><br></pre></td></tr></table></figure>
+
+<h2 id="安装python各种包"><a href="#安装python各种包" class="headerlink" title="安装python各种包"></a>安装python各种包</h2><p>在PS或spyder中采用pip命令安装所需的包，例如</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pip install matplotlib   </span><br></pre></td></tr></table></figure>
+
+<p>pip常用指令如下：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">pip install package_name</span><br><span class="line">pip install --upgrade package_name</span><br><span class="line">pip uninstall package_name</span><br><span class="line">pip list</span><br><span class="line">pip show package_name</span><br><span class="line">pip --help</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+          <div class="reward-container">
+  <div>Buy me a coffee</div>
+  <button>
+    Donate
+  </button>
+  <div class="post-reward">
+      <div>
+        <img src="/images/wechatpay.png" alt="Zhiyong Chen WeChat Pay">
+        <span>WeChat Pay</span>
+      </div>
+      <div>
+        <img src="/images/alipay.png" alt="Zhiyong Chen Alipay">
+        <span>Alipay</span>
+      </div>
+
+  </div>
+</div>
+
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/2023/02/17/%E7%B2%BE%E7%A5%9E/" rel="prev" title="Python环境安装指南">
+                  <i class="fa fa-chevron-left"></i> Python环境安装指南
+                </a>
+            </div>
+            <div class="post-nav-item">
+                <a href="/2023/02/18/%E5%BE%AE%E7%A7%AF%E5%88%86%E8%AF%95%E5%8D%B7/" rel="next" title="微积分试卷">
+                  微积分试卷 <i class="fa fa-chevron-right"></i>
+                </a>
+            </div>
+          </div>
+    </footer>
+  </article>
+</div>
+
+
+
+
+
+
+</div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+
+
+<div class="copyright">
+  &copy; 
+  <span itemprop="copyrightYear">2023</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Zhiyong Chen</span>
+</div>
+  <div class="powered-by">Powered by <a href="https://hexo.io/" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/" rel="noopener" target="_blank">NexT.Gemini</a>
+  </div>
+
+    </div>
+  </footer>
+
+  
+  <div class="back-to-top" role="button" aria-label="Back to top">
+    <i class="fa fa-arrow-up fa-lg"></i>
+    <span>0%</span>
+  </div>
+
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+
+
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous"></script>
+<script src="/js/comments.js"></script><script src="/js/utils.js"></script><script src="/js/motion.js"></script><script src="/js/next-boot.js"></script>
+
+  
+
+
+
+
+  
+
+
+
+
+  
+
+  <script class="next-config" data-name="enableMath" type="application/json">false</script><script class="next-config" data-name="mathjax" type="application/json">{"enable":"ams","tags":"none","js":{"url":"https://cdnjs.cloudflare.com/ajax/libs/mathjax/3.2.2/es5/tex-mml-chtml.js","integrity":"sha256-MASABpB4tYktI2Oitl4t+78w/lyA+D7b/s9GEP0JOGI="}}</script>
+<script src="/js/third-party/math/mathjax.js"></script>
+
+
+
+</body>
+</html>
